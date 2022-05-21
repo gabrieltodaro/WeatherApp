@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Weather
+
+  Created by Gabriel Patane Todaro on 21/05/22.
+  
+*/
+
+"title_error" = "Error";
+"button_ok" = "Ok";
+"button_cancel" = "Cancelar";
+
+"title_temp_min" = "Baja";
+"title_temp_max" = "Alta";
+"title_feels_like" = "Sensación térmica";
+"title_humidity" = "Humedad";
+"title_wind" = "La velocidad del viento es";
+"title_wind_direction" = "La direccion es";
