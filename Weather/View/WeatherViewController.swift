@@ -59,10 +59,10 @@ class WeatherViewController: UIViewController {
 
 extension WeatherViewController: WeatherCoordinatorDelegate {
     func presentErrorAlert(error: String) {
-        let alert = UIAlertController(title: "title_error".localized,
+        let alert = UIAlertController(title: L18nKeys.titleError.localized(),
                                       message: error,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "button_ok".localized,
+        alert.addAction(UIAlertAction(title: L18nKeys.buttonOk.localized(),
                                       style: .default,
                                       handler: nil))
 

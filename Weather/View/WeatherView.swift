@@ -214,7 +214,6 @@ class WeatherView: UIView {
 
         guard let name = weather.cityName,
             let main = weather.main else {
-                print("******** Error on present main information")
                 return
             }
 
@@ -230,8 +229,6 @@ class WeatherView: UIView {
             weatherImage.kf.setImage(with: weatherInfo?.iconURL(),
                                      placeholder: UIImage(named: "ic_sun_placeholder"))
         } else {
-            print("******** Error on present weather information")
-            print("**************** hiding it")
             mood.isHidden = true
             weatherImage.isHidden = true
         }
@@ -241,8 +238,6 @@ class WeatherView: UIView {
             windSpeed.text =  wind.presentableWindSpeed(with: viewModel.getSpeedUnit(fom: languageCode))
             windDirection.text = wind.presentabelWindDirection()
         } else {
-            print("******** Error on present wind information")
-            print("**************** hiding it")
             windSpeed.isHidden = true
         }
     }

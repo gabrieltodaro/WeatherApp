@@ -12,7 +12,6 @@
 		AB4D4EC628394C3E00E2EBD8 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4EC528394C3E00E2EBD8 /* NetworkLogger.swift */; };
 		AB4D4EC82839532100E2EBD8 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4EC72839532100E2EBD8 /* WeatherViewModel.swift */; };
 		AB4D4ECB2839654300E2EBD8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4ECA2839654300E2EBD8 /* UIView.swift */; };
-		AB4D4ECD2839659700E2EBD8 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4ECC2839659700E2EBD8 /* NSLayoutConstraint.swift */; };
 		AB6FCEB0283A8FAD00837724 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FCEAF283A8FAD00837724 /* WeatherView.swift */; };
 		AB6FCEB2283A9B5000837724 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FCEB1283A9B5000837724 /* Main.swift */; };
 		AB6FCEB5283AAEE300837724 /* BaseSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FCEB4283AAEE300837724 /* BaseSnapshotTest.swift */; };
@@ -41,8 +40,6 @@
 		ABDFBD9028399FC100A0DB43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABDFBD9228399FC100A0DB43 /* Localizable.strings */; };
 		ABDFBD9A2839B4F400A0DB43 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFBD992839B4F400A0DB43 /* String.swift */; };
 		ABDFBD9C2839C13100A0DB43 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFBD9B2839C13100A0DB43 /* UIColor.swift */; };
-		ABDFBD9E2839D18500A0DB43 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFBD9D2839D18500A0DB43 /* UIImage.swift */; };
-		ABDFBDA02839DB1500A0DB43 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFBD9F2839DB1500A0DB43 /* Double.swift */; };
 		ABF588A3283AB44E00B3B842 /* WeatherModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF588A2283AB44E00B3B842 /* WeatherModelMock.swift */; };
 		ABF588A7283AB8C600B3B842 /* WeatherModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF588A6283AB8C600B3B842 /* WeatherModelTests.swift */; };
 		ABF588A9283AD1BE00B3B842 /* WeatherViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF588A8283AD1BE00B3B842 /* WeatherViewModelTests.swift */; };
@@ -68,7 +65,6 @@
 		AB4D4EC528394C3E00E2EBD8 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		AB4D4EC72839532100E2EBD8 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		AB4D4ECA2839654300E2EBD8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		AB4D4ECC2839659700E2EBD8 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		AB6FCEAF283A8FAD00837724 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		AB6FCEB1283A9B5000837724 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		AB6FCEB4283AAEE300837724 /* BaseSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSnapshotTest.swift; sourceTree = "<group>"; };
@@ -106,8 +102,6 @@
 		ABDFBD982839B13C00A0DB43 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ABDFBD992839B4F400A0DB43 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		ABDFBD9B2839C13100A0DB43 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		ABDFBD9D2839D18500A0DB43 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		ABDFBD9F2839DB1500A0DB43 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		ABF588A2283AB44E00B3B842 /* WeatherModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelMock.swift; sourceTree = "<group>"; };
 		ABF588A6283AB8C600B3B842 /* WeatherModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelTests.swift; sourceTree = "<group>"; };
 		ABF588A8283AD1BE00B3B842 /* WeatherViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModelTests.swift; sourceTree = "<group>"; };
@@ -149,12 +143,9 @@
 		AB4D4EC92839653400E2EBD8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AB4D4ECC2839659700E2EBD8 /* NSLayoutConstraint.swift */,
 				ABDFBD992839B4F400A0DB43 /* String.swift */,
 				ABDFBD9B2839C13100A0DB43 /* UIColor.swift */,
 				AB4D4ECA2839654300E2EBD8 /* UIView.swift */,
-				ABDFBD9D2839D18500A0DB43 /* UIImage.swift */,
-				ABDFBD9F2839DB1500A0DB43 /* Double.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -535,11 +526,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC78D782836C1BB0039BF24 /* JSONParameterEncoder.swift in Sources */,
-				ABDFBD9E2839D18500A0DB43 /* UIImage.swift in Sources */,
 				ABC78D7A2836DDB80039BF24 /* NetworkRouter.swift in Sources */,
 				ABDFBD9A2839B4F400A0DB43 /* String.swift in Sources */,
 				AB6FCEB2283A9B5000837724 /* Main.swift in Sources */,
-				ABDFBDA02839DB1500A0DB43 /* Double.swift in Sources */,
 				ABC78D712836B0620039BF24 /* HTTPTask.swift in Sources */,
 				AB6FCEB0283A8FAD00837724 /* WeatherView.swift in Sources */,
 				ABC78D6D2836AFFE0039BF24 /* EndpointType.swift in Sources */,
@@ -558,7 +547,6 @@
 				AB967CE728370CAA00F288E8 /* OpenWeatherApi.swift in Sources */,
 				AB967CE928370E5400F288E8 /* NetworkManager.swift in Sources */,
 				AB8FEA642834805000B46861 /* SceneDelegate.swift in Sources */,
-				AB4D4ECD2839659700E2EBD8 /* NSLayoutConstraint.swift in Sources */,
 				AB4D4ECB2839654300E2EBD8 /* UIView.swift in Sources */,
 				ABC78D762836BC610039BF24 /* URLParameterEncoder.swift in Sources */,
 			);
