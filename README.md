@@ -8,14 +8,8 @@ Usage of [Open Weather Map API](https://openweathermap.org/api) to present some 
 
 ## Running
 
-This project has some dependencies.
-
-Simply run this in the root folder of the code. 
-```sh
-pod install
-```
-
-If you don't know about Cocoa Pods, just [click here](https://cocoapods.org).
+This project has some dependencies. They are attached using Swift Package Manager.
+To learn more about this native package manager, [click here](https://www.swift.org/package-manager/).
 
 
 ## Technologies
@@ -29,11 +23,9 @@ If you don't know about Cocoa Pods, just [click here](https://cocoapods.org).
 [Snapshot tests](https://github.com/uber/ios-snapshot-test-case/) with Uber's library.
 
 
-## Meta
+## Contact
 
-Gabriel "Gabz" Todaro – [@gabztodaro](https://twitter.com/gabztodaro) – gabriel.todaro@outlook.com
-
-[My github link](http://github.com/gabrieltodaro/)
+Gabriel Todaro – [@gabrieltodaro](http://linkedin.com/in/gabrieltodaro/) – gabriel.todaro@outlook.com
 
 [swift-image]: https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
