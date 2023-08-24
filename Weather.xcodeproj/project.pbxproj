@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E104A1F2A97E0F40072C3C6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5E104A1E2A97E0F40072C3C6 /* Kingfisher */; };
 		5E104A222A97E10D0072C3C6 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5E104A212A97E10D0072C3C6 /* iOSSnapshotTestCase */; };
+		5EE3188F2A97E7CA00D96157 /* iOSSnapshotTestCase in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 5E104A212A97E10D0072C3C6 /* iOSSnapshotTestCase */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		AB4D4EC628394C3E00E2EBD8 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4EC528394C3E00E2EBD8 /* NetworkLogger.swift */; };
 		AB4D4EC82839532100E2EBD8 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4EC72839532100E2EBD8 /* WeatherViewModel.swift */; };
 		AB4D4ECB2839654300E2EBD8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4ECA2839654300E2EBD8 /* UIView.swift */; };
@@ -54,6 +55,20 @@
 			remoteInfo = Weather;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5EE318902A97E7CA00D96157 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5EE3188F2A97E7CA00D96157 /* iOSSnapshotTestCase in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AB4D4EC528394C3E00E2EBD8 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -295,6 +310,7 @@
 				AB8FEA5B2834805000B46861 /* Frameworks */,
 				AB8FEA5C2834805000B46861 /* Resources */,
 				AB72542F283AEC2300D96332 /* ShellScript */,
+				5EE318902A97E7CA00D96157 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,7 +411,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		AB72542F283AEC2300D96332 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -408,7 +424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
