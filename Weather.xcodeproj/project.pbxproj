@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E104A1F2A97E0F40072C3C6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5E104A1E2A97E0F40072C3C6 /* Kingfisher */; };
-		5E104A222A97E10D0072C3C6 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5E104A212A97E10D0072C3C6 /* iOSSnapshotTestCase */; };
-		5EE3188F2A97E7CA00D96157 /* iOSSnapshotTestCase in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 5E104A212A97E10D0072C3C6 /* iOSSnapshotTestCase */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5E43A2F52A97FEE6008ECBF7 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5E43A2F42A97FEE6008ECBF7 /* iOSSnapshotTestCase */; };
 		AB4D4EC628394C3E00E2EBD8 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4EC528394C3E00E2EBD8 /* NetworkLogger.swift */; };
 		AB4D4EC82839532100E2EBD8 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4EC72839532100E2EBD8 /* WeatherViewModel.swift */; };
 		AB4D4ECB2839654300E2EBD8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D4ECA2839654300E2EBD8 /* UIView.swift */; };
@@ -63,7 +62,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5EE3188F2A97E7CA00D96157 /* iOSSnapshotTestCase in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E104A222A97E10D0072C3C6 /* iOSSnapshotTestCase in Frameworks */,
 				5E104A1F2A97E0F40072C3C6 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E43A2F52A97FEE6008ECBF7 /* iOSSnapshotTestCase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +317,6 @@
 			name = Weather;
 			packageProductDependencies = (
 				5E104A1E2A97E0F40072C3C6 /* Kingfisher */,
-				5E104A212A97E10D0072C3C6 /* iOSSnapshotTestCase */,
 			);
 			productName = Weather;
 			productReference = AB8FEA5E2834805000B46861 /* Weather.app */;
@@ -339,6 +336,9 @@
 				AB8FEA762834805200B46861 /* PBXTargetDependency */,
 			);
 			name = WeatherTests;
+			packageProductDependencies = (
+				5E43A2F42A97FEE6008ECBF7 /* iOSSnapshotTestCase */,
+			);
 			productName = WeatherTests;
 			productReference = AB8FEA742834805200B46861 /* WeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -375,7 +375,7 @@
 			mainGroup = AB8FEA552834805000B46861;
 			packageReferences = (
 				5E104A1D2A97E0F40072C3C6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				5E104A202A97E10D0072C3C6 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+				5E43A2F32A97FEE6008ECBF7 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
 			);
 			productRefGroup = AB8FEA5F2834805000B46861 /* Products */;
 			projectDirPath = "";
@@ -568,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -623,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -700,7 +700,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7ME686XB8K;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.gapps.WeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -720,7 +720,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7ME686XB8K;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.gapps.WeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -772,9 +772,9 @@
 				minimumVersion = 7.9.0;
 			};
 		};
-		5E104A202A97E10D0072C3C6 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+		5E43A2F32A97FEE6008ECBF7 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/uber/ios-snapshot-test-case.git";
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case/";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 8.0.0;
@@ -788,9 +788,9 @@
 			package = 5E104A1D2A97E0F40072C3C6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		5E104A212A97E10D0072C3C6 /* iOSSnapshotTestCase */ = {
+		5E43A2F42A97FEE6008ECBF7 /* iOSSnapshotTestCase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5E104A202A97E10D0072C3C6 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			package = 5E43A2F32A97FEE6008ECBF7 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
 			productName = iOSSnapshotTestCase;
 		};
 /* End XCSwiftPackageProductDependency section */

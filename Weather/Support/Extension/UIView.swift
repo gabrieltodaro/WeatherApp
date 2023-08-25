@@ -10,7 +10,6 @@ import UIKit
 // MARK: - addSubviews
 
 // swiftlint:disable line_length
-
 extension UIView {
     func showBlurLoader() {
         let blurLoader = BlurLoader(frame: frame)
@@ -430,3 +429,4 @@ public extension UIView {
         return self
     }
 }
+// swiftlint:enable line_length

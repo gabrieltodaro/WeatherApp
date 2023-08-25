@@ -18,7 +18,7 @@ enum WeatherSpeedUnit: String {
     case metric = "m/s"
 }
 
-struct Weather: Codable {
+struct Weather: Decodable {
     let coord: Coordinates?
     let main: Main?
     let weatherInfo: [WeatherInfo?]
@@ -47,7 +47,7 @@ struct Weather: Codable {
     }
 }
 
-struct Coordinates: Codable {
+struct Coordinates: Decodable {
     let latitude, longitude: Double?
 
     private enum CodingKeys: String, CodingKey {
@@ -56,7 +56,7 @@ struct Coordinates: Codable {
     }
 }
 
-struct WeatherInfo: Codable {
+struct WeatherInfo: Decodable {
     let identifier: Int?
     let main, description, icon: String?
 
@@ -72,7 +72,7 @@ struct WeatherInfo: Codable {
     }
 }
 
-struct Wind: Codable {
+struct Wind: Decodable {
     let speed, direction, gust: Double?
 
     private enum CodingKeys: String, CodingKey {
@@ -90,7 +90,7 @@ struct Wind: Codable {
     }
 }
 
-struct Clouds: Codable {
+struct Clouds: Decodable {
     let all: Double?
 
     private enum CodingKeys: String, CodingKey {
@@ -98,7 +98,7 @@ struct Clouds: Codable {
     }
 }
 
-struct Rain: Codable {
+struct Rain: Decodable {
     let oneHour, threeHour: Double?
 
     private enum CodingKeys: String, CodingKey {
@@ -107,7 +107,7 @@ struct Rain: Codable {
     }
 }
 
-struct Snow: Codable {
+struct Snow: Decodable {
     let oneHour, threeHour: Double?
 
     private enum CodingKeys: String, CodingKey {

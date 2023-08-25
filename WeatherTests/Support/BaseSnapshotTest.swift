@@ -5,7 +5,7 @@
 //  Created by Gabriel Patane Todaro on 22/05/22.
 //
 
-import FBSnapshotTestCase
+import iOSSnapshotTestCase
 import UIKit
 
 class BaseSnapShotTest: FBSnapshotTestCase {

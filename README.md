@@ -11,6 +11,13 @@ Usage of [Open Weather Map API](https://openweathermap.org/api) to present some 
 This project has some dependencies. They are attached using Swift Package Manager.
 To learn more about this native package manager, [click here](https://www.swift.org/package-manager/).
 
+When running tests, you'll need to record the snapshots first. To do so:
+1. Open ```WeatherViewSnapshotTests``` class.
+2. Update ```recordMode``` variable inside ```setUp()``` method to true.
+3. Run tests.
+
+It's going to fail. Now, update ```recordMode``` variable to false again and voi'la. Run tests again.
+
 
 ## Technologies
 
