@@ -82,11 +82,11 @@ struct Wind: Decodable {
     }
 
     func presentableWindSpeed(with metric: String) -> String {
-        "\(L18nKeys.titleWind.localized()) \(speed ?? 0) \(metric)"
+        "\(I18nKeys.titleWind.localized()) \(speed ?? 0) \(metric)"
     }
 
     func presentabelWindDirection() -> String {
-        "\(L18nKeys.titleWindDirection.localized()) \(direction ?? 0)º"
+        "\(I18nKeys.titleWindDirection.localized()) \(direction ?? 0)º"
     }
 }
 

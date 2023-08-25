@@ -68,7 +68,6 @@ struct NetworkManager {
                         let apiResponse = try JSONDecoder().decode(Weather.self, from: responseData)
                         completion(apiResponse, nil)
                     } catch {
-                        print(error)
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }
                 case .failure(let networkFailureError):

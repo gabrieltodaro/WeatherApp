@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum L18nKeys: String {
+enum I18nKeys: String {
     case titleError = "title_error"
     case buttonOk = "button_ok"
     case buttonCancel = "button_cancel"
@@ -18,6 +18,9 @@ enum L18nKeys: String {
     case titleHumidity = "title_humidity"
     case titleWind = "title_wind"
     case titleWindDirection = "title_wind_direction"
+
+    case locationDeniedAlertTitle = "location_denied_alert_title"
+    case locationDeniedAlertDescription = "location_denied_alert_description"
 
     func localized() -> String {
         rawValue.localized

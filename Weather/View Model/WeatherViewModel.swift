@@ -18,6 +18,27 @@ struct WeatherViewModel {
     let networkManager: NetworkManager
     let delegate: WeatherCoordinatorDelegate?
 
+    // MARK: - View Model helper methods
+    lazy var languageCode: String = {
+        Locale.current.languageCode ?? enLanguageCode
+    }()
+
+    func getLanguageCode() -> String {
+        Locale.current.languageCode ?? enLanguageCode
+    }
+
+    func getUnits(from languageCode: String) -> String {
+        languageCode == enLanguageCode
+        ? WeatherUnit.imperial.rawValue
+        : WeatherUnit.metric.rawValue
+    }
+
+    func getSpeedUnit(fom languageCode: String) -> String {
+        languageCode == enLanguageCode
+        ? WeatherSpeedUnit.mph.rawValue
+        : WeatherSpeedUnit.metric.rawValue
+    }
+
     // MARK: - Request to the Open Weather API
     func getWeather(at lat: Double, and lon: Double) {
         networkManager.getWeather(at: lat,
@@ -38,26 +59,5 @@ struct WeatherViewModel {
                 }
             }
         }
-    }
-
-    // MARK: - View Model helper methods
-    lazy var languageCode: String = {
-        Locale.current.languageCode ?? enLanguageCode
-    }()
-
-    func getLanguageCode() -> String {
-        Locale.current.languageCode ?? enLanguageCode
-    }
-
-    func getUnits(from languageCode: String) -> String {
-        languageCode == enLanguageCode
-        ? WeatherUnit.imperial.rawValue
-        : WeatherUnit.metric.rawValue
-    }
-
-    func getSpeedUnit(fom languageCode: String) -> String {
-        languageCode == enLanguageCode
-        ? WeatherSpeedUnit.mph.rawValue
-        : WeatherSpeedUnit.metric.rawValue
     }
 }

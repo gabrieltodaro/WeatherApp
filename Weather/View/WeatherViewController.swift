@@ -20,7 +20,6 @@ class WeatherViewController: UIViewController {
     ///
     /// It will be changed in the future to get dynamic places
     /// Or a place from a map
-
     private var lat: Double = 0.0
     private var long: Double = 0.0
 
@@ -42,11 +41,10 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
 
         locationManager.delegate = self
+        setupLoading()
 
         viewModel = WeatherViewModel(networkManager: NetworkManager(), delegate: self)
         weatherView?.viewModel = viewModel
-//        setupLoading()
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,21 +79,26 @@ class WeatherViewController: UIViewController {
     }
 
     private func showDeniedAlert() {
-        let alert = UIAlertController(title: "Location denied",
-                                      message: "You denied the location request. Please go to Settings app and change it.",
+        present(deniedAlert(), animated: true, completion: nil)
+    }
+
+    func deniedAlert() -> UIAlertController {
+        let alert = UIAlertController(title: I18nKeys.locationDeniedAlertTitle.localized(),
+                                      message: I18nKeys.locationDeniedAlertDescription.localized(),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok",
+        alert.addAction(UIAlertAction(title: I18nKeys.buttonOk.localized(),
                                       style: .default))
-        present(alert, animated: true, completion: nil)
+
+        return alert
     }
 }
 
 extension WeatherViewController: WeatherCoordinatorDelegate {
     func presentErrorAlert(error: String) {
-        let alert = UIAlertController(title: L18nKeys.titleError.localized(),
+        let alert = UIAlertController(title: I18nKeys.titleError.localized(),
                                       message: error,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: L18nKeys.buttonOk.localized(),
+        alert.addAction(UIAlertAction(title: I18nKeys.buttonOk.localized(),
                                       style: .default,
                                       handler: nil))
 

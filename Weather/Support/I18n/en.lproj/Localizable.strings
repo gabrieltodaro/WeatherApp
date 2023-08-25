@@ -16,3 +16,6 @@
 "title_humidity" = "Humidity";
 "title_wind" = "The wind speed is";
 "title_wind_direction" = "Direction is";
+
+"location_denied_alert_title" = "Location denied";
+"location_denied_alert_description" = "You denied the location request. Please go to Settings app and change it.";

@@ -23,18 +23,18 @@ struct Main: Codable {
     }
 
     var presentableMinTemperature: String {
-        "\(L18nKeys.titleTempMin.localized()): \(String(format: "%.0f", minTemperature ?? 0))º"
+        "\(I18nKeys.titleTempMin.localized()): \(String(format: "%.0f", minTemperature ?? 0))º"
     }
 
     var presentableMaxTemperature: String {
-        "\(L18nKeys.titleTempMax.localized()): \(String(format: "%.0f", maxTemperature ?? 0))º"
+        "\(I18nKeys.titleTempMax.localized()): \(String(format: "%.0f", maxTemperature ?? 0))º"
     }
 
     var presentableFeelsLike: String {
-        "\(L18nKeys.titleFeelsLike.localized())º: \(String(format: "%.0f", feelsLike ?? 0))"
+        "\(I18nKeys.titleFeelsLike.localized())º: \(String(format: "%.0f", feelsLike ?? 0))"
     }
 
     var presentableHumidity: String {
-        "\(L18nKeys.titleHumidity.localized()): \(String(format: "%.0f", humidity ?? 0))%"
+        "\(I18nKeys.titleHumidity.localized()): \(String(format: "%.0f", humidity ?? 0))%"
     }
 }

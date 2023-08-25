@@ -28,3 +28,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         .portrait
     }
 }
+// swiftlint:enable line_length

@@ -16,3 +16,6 @@
 "title_humidity" = "Umidade";
 "title_wind" = "A velocidade do vento é de";
 "title_wind_direction" = "A direção é";
+
+"location_denied_alert_title" = "Localização negada.";
+"location_denied_alert_description" = "Você negou o pedido de localização. Por favor, vá até o aplicativo Ajustes e altere.";
