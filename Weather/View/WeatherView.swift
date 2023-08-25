@@ -161,32 +161,50 @@ class WeatherView: UIView {
     }
 
     private func setupConstraints() {
-        weatherImage
-            .leadingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .topToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .trailingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .heightTo(Constants.CGFloatConstants.const120)
+        weatherImage.anchor(
+            left: self.safeAreaLayoutGuide.leftAnchor,
+            paddingLeft: Constants.CGFloatConstants.const16,
+            top: self.safeAreaLayoutGuide.topAnchor,
+            paddingTop: Constants.CGFloatConstants.const16,
+            right: self.safeAreaLayoutGuide.rightAnchor,
+            paddingRight: Constants.CGFloatConstants.const16,
+            height: Constants.CGFloatConstants.const120
+        )
 
-        temperature
-            .topToBottom(of: weatherImage, margin: Constants.CGFloatConstants.const32)
-            .centerHorizontal(to: self)
+        temperature.anchor(
+            top: weatherImage.bottomAnchor,
+            paddingTop: Constants.CGFloatConstants.const32,
+            centerX: self.centerXAnchor
+        )
 
-        cityStackView
-            .leadingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .topToBottom(of: temperature, margin: Constants.CGFloatConstants.const32)
-            .trailingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
+        cityStackView.anchor(
+            left: self.safeAreaLayoutGuide.leftAnchor,
+            paddingLeft: Constants.CGFloatConstants.const16,
+            top: temperature.bottomAnchor,
+            paddingTop: Constants.CGFloatConstants.const32,
+            right: self.safeAreaLayoutGuide.rightAnchor,
+            paddingRight: Constants.CGFloatConstants.const16
+        )
 
-        completeTemperatureStackView
-            .leadingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .topToBottom(of: cityStackView, margin: Constants.CGFloatConstants.const8)
-            .trailingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .heightTo(Constants.CGFloatConstants.const64)
+        completeTemperatureStackView.anchor(
+            left: self.safeAreaLayoutGuide.leftAnchor,
+            paddingLeft: Constants.CGFloatConstants.const16,
+            top: cityStackView.bottomAnchor,
+            paddingTop: Constants.CGFloatConstants.const8,
+            right: self.safeAreaLayoutGuide.rightAnchor,
+            paddingRight: Constants.CGFloatConstants.const16,
+            height: Constants.CGFloatConstants.const64
+        )
 
-        windStackView
-            .leadingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .topToBottom(of: completeTemperatureStackView, margin: Constants.CGFloatConstants.const8)
-            .trailingToSuperview(Constants.CGFloatConstants.const16, toSafeArea: true)
-            .heightTo(Constants.CGFloatConstants.const64)
+        windStackView.anchor(
+            left: self.safeAreaLayoutGuide.leftAnchor,
+            paddingLeft: Constants.CGFloatConstants.const16,
+            top: completeTemperatureStackView.bottomAnchor,
+            paddingTop: Constants.CGFloatConstants.const8,
+            right: self.safeAreaLayoutGuide.rightAnchor,
+            paddingRight: Constants.CGFloatConstants.const16,
+            height: Constants.CGFloatConstants.const64
+        )
     }
 
     func setupColors() {
