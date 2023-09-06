@@ -245,7 +245,7 @@ class WeatherView: UIView {
         if let weatherInfo = weather.weatherInfo.first {
             mood.text = weatherInfo?.description?.capitalized ?? ""
             weatherImage.kf.setImage(with: weatherInfo?.iconURL(),
-                                     placeholder: UIImage(named: "ic_sun_placeholder"))
+                                     placeholder: nil)
         } else {
             mood.isHidden = true
             weatherImage.isHidden = true
